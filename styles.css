@@ -182,16 +182,6 @@ button {
   top: 0;
 }
 
-@media only screen and (max-width: 700px) {
-  .box-container {
-    padding: 0 20px;
-    width: 100%;
-  }
-  .card {
-    flex-direction: column;
-  }
-}
-
 /* FAQ Part */
 
 h2 {
@@ -229,11 +219,21 @@ h2 {
 
 /* FAQ Part */
 
-#myBtn{
-  margin: 0;
-  position: absolute;
-  top: 90%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+@media only screen and (max-width: 700px) {
+  .box-container {
+    padding: 0 20px;
+    width: 100%;
+  }
+  #histories{
+    display: block;
+  }
+  .card {
+    flex-direction: column;
+  }
+  #myBtn{
+    margin: 10px;
+    position: relative;
+    top: 50%;
+    left:50%;
+  }
 }
