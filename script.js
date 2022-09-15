@@ -6,12 +6,14 @@ const resultModal = document.getElementById("result");
 const modalBackground = document.getElementById("modal-background");
 
 // variables
+
 let userText = "";
 let errorCount = 0;
 let startTime;
 let questionText = "";
 
 // Load and display question
+
 fetch("./texts.json")
   .then((res) => res.json())
   .then((data) => {
@@ -32,10 +34,12 @@ const typeController = (e) => {
   }
 
   // these are the valid character we are allowing to type
+
   const validLetters =
     "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890!@#$%^&*()_+-={}[]'\".,?";
 
   // if it is not a valid character like Control/Alt then skip displaying anything
+
   if (!validLetters.includes(newLetter)) {
     return;
   }
@@ -51,6 +55,7 @@ const typeController = (e) => {
   }
 
   // check if given question text is equal to user typed text
+
   if (questionText === userText) {
     gameOver();
   }
@@ -65,10 +70,13 @@ const validate = (key) => {
 };
 
 // FINISHED TYPING
+
 const gameOver = () => {
   document.removeEventListener("keydown", typeController);
+
   // the current time is the finish time
   // so total time taken is current time - start time
+
   const finishTime = new Date().getTime();
   const timeTaken = Math.round((finishTime - startTime) / 1000);
 
@@ -76,11 +84,15 @@ const gameOver = () => {
   resultModal.innerHTML = "";
   resultModal.classList.toggle("hidden");
   modalBackground.classList.toggle("hidden");
+
   // clear user text
   display.innerHTML = "";
+
   // make it inactive
   display.classList.add("inactive");
+
   // show result
+
   resultModal.innerHTML += `
     <h1>Finished!</h1>
     <p>You took: <span class="bold">${timeTaken}</span> seconds</p>
@@ -91,6 +103,7 @@ const gameOver = () => {
   addHistory(questionText, timeTaken, errorCount);
 
   // restart everything
+  
   startTime = null;
   errorCount = 0;
   userText = "";
