@@ -43,5 +43,5 @@ function displayHistory() {
 
 document.getElementById("myBtn").addEventListener("click", myFunction);
 function myFunction() {
-  window.location.href="Blog.html";
+  window.location.href="blog.html";
 }
