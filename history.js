@@ -39,6 +39,8 @@ function displayHistory() {
   });
 }
 
+// Button Set
+
 document.getElementById("myBtn").addEventListener("click", myFunction);
 function myFunction() {
   window.location.href="Blog.html";

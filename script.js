@@ -103,7 +103,7 @@ const gameOver = () => {
   addHistory(questionText, timeTaken, errorCount);
 
   // restart everything
-  
+
   startTime = null;
   errorCount = 0;
   userText = "";
@@ -149,6 +149,7 @@ startBtn.addEventListener("click", start);
 displayHistory();
 
 // Show typing time spent
+
 setInterval(() => {
   const currentTime = new Date().getTime();
   const timeSpent = Math.round((currentTime - startTime) / 1000);
