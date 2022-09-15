@@ -152,7 +152,6 @@ button {
   width: 100%;
   height: 100%;
   padding: 50px;
-  display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 30px;
@@ -166,6 +165,14 @@ button {
   );
   backdrop-filter: blur(5px);
   margin-bottom: 30px;
+}
+
+.card h3{
+  margin-bottom: 5px;
+}
+
+.card p{
+  margin-top: 5px;
 }
 
 #modal-background {
