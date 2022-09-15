@@ -142,8 +142,9 @@ button {
 }
 
 #histories {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-gap: 10px;
   justify-content: space-around;
 }
 
@@ -228,56 +229,11 @@ h2 {
 
 /* FAQ Part */
 
-.truncate {
-  width: 250px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.container-fluid{
-   width: 40%;
-  margin: 0 auto;
-  margin-top: 100px;
-}
-.container-fluid h2{
-  font-size: larger;
-  color: palevioletred;
-  position: relative;
-  width: 23rem;
-}
-.container-fluid h2::after{
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: 12px;
-  width: 67px;
-  height: 2px;
-}
-.according {
-  width: 100%;
-  padding: 0 5px;
-  border: 2px solid #6db5ff;
-  cursor: pointer;
-  border-radius: 50px;
-  display: flex;
-  margin: 10px 0;
-  align-items: center;
-}
-
-.according h5{
-  font-size: 18px;
+#myBtn{
   margin: 0;
-  padding: 3px 0 0 0;
-  font-weight: normal;
-  color: #1f5c9a;
-}
-.panel{
-  padding: 0 15px;
-  border-left: 1px solid #6db5ff;
-  margin-left: 25px;
-  font-size: 14px;
-  text-align: justify;
-  overflow: hidden;
-  max-height: 300;
-  transition: all .5s ease-in;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
